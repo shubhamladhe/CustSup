@@ -59,6 +59,7 @@ public class TicketController {
     @RequestMapping(value = "/tickets/delete/{id}", method = RequestMethod.GET)
     public String deleteTicket(@PathVariable("id") Long id) {
         // Code here
+        ticketService.deleteById(id);
         return "redirect:/";
     }
 
